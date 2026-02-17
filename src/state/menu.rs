@@ -1,16 +1,12 @@
-use bevy::prelude::States;
+use crate::state::GameState;
+use bevy::{
+    ecs::system::Commands,
+    prelude::{ButtonInput, KeyCode, NextState, Res, ResMut},
+    ui::Node,
+};
 
-// Game state definitions and transitions.
-#[derive(Clone, Copy, PartialEq, Eq, Hash, Debug, Default, States)]
-pub enum GameState {
-    #[default]
-    Menu,
-    Pause,
-    Run,
-    Combat,
-    Victory,
-    Defeat,
-}
+
+pub fn setup_run_placeholder(mut commands: Commands) {}
 
 #[cfg(test)]
 mod tests {
